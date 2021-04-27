@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-f
+  labels:
+    app: my-app-f
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app-f
+  template:
+    metadata:
+      labels:
+        app: my-app-f
+    spec:
+      containers:
+      - name: udagram-feed
+        image: danotsonof/udagram_feed
+        ports:
+        - containerPort: 80

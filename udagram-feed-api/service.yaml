@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-f
+  labels:
+    run: my-app-f
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: my-app-f
